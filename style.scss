@@ -7,12 +7,22 @@ html {
     user-select: none;
 }
 
+h1, p{
+    margin: 0;
+    padding: 0;
+}
+
+p a{
+    text-decoration: underline;
+    color: rgb(225, 119, 34);
+    font-family: 'Yatra One', cursive;
+}
+ 
 .lab {
     width: 105px;
 }
 
 body {
-    // background-color: aquamarine;
     background: url(https://images.pexels.com/photos/50677/rain-after-the-rain-a-drop-of-drop-of-rain-50677.jpeg?cs=srgb&dl=pexels-pixabay-50677.jpg&fm=jpg);
     background-position: center;
     background-size: cover;
@@ -161,7 +171,6 @@ body {
                     }
                 }
             }
-
         }
     }
 }

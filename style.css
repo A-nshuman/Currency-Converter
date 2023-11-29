@@ -7,6 +7,17 @@ html {
   user-select: none;
 }
 
+h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+p a {
+  text-decoration: underline;
+  color: rgb(225, 119, 34);
+  font-family: "Yatra One", cursive;
+}
+
 .lab {
   width: 105px;
 }
