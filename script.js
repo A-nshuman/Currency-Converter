@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    const copyBtn = document.getElementById('copyBtn');
     const currencyFrom = document.getElementById('currencyFrom');
     const currencyTo = document.getElementById('currencyTo');
     const amountInput = document.getElementById('amount');
@@ -41,5 +42,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.key === 'Enter') {
             convertButton.click();
         }
+    });
+
+    copyBtn.addEventListener('click', () => {
+        copyBtn.innerHTML = 'task_alt';
+        setTimeout(() => {
+            copyBtn.innerHTML = 'content_copy'
+        }, 500);
+
+        const textToCopy = convertedAmountDiv.textContent;
+
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+                console.log('Text copied to clipboard');
+            })
+            .catch((err) => {
+                console.error('Unable to copy text to clipboard', err);
+            });
     });
 });
