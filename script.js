@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const conversionRate = data.rates[toCurrency];
                 const convertedAmount = amount * conversionRate;
 
-                convertedAmountDiv.textContent = `${convertedAmount.toFixed(2)} ${toCurrency}`;
+                const formattedAmount = convertedAmount.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+                convertedAmountDiv.textContent = `${formattedAmount} ${toCurrency}`;
                 convertedAmountDiv.style.color = 'black';
             })
             .catch(error => {
